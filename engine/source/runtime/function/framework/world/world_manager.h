@@ -13,11 +13,13 @@ namespace Pilot
 
     class WorldManager : public PublicSingleton<WorldManager>
     {
+        // allow this class to modify private member and call the private method of the WorldManager
         friend class PublicSingleton<WorldManager>;
 
     public:
         virtual ~WorldManager();
 
+        //remove copy and assignment constructor
         WorldManager(const WorldManager&) = delete;
         WorldManager& operator=(const WorldManager&) = delete;
 
