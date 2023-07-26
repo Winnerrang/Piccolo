@@ -9,6 +9,9 @@ set(BUILD_SHARED_LIBS OFF)
 include(CMakeDependentOption)
 
 # ---- Include guards ----
+# check whether we run cmake in where the CMakeLists.txt is
+# PROJECT_SOURCE_DIR: the path that you specifies in the argument when you run the cmake
+# PROJECT_BINARY_DIR: the path where you run cmake
 if(PROJECT_SOURCE_DIR STREQUAL PROJECT_BINARY_DIR)
   message(
     FATAL_ERROR

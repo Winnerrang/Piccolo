@@ -63,3 +63,19 @@ if(NOT TARGET Jolt)
     endif()
 
 endif()
+
+# This if statement is saying if there is not target called sol2
+# then include it
+if(NOT TARGET sol2)
+
+    add_subdirectory(sol2-3.3.0)
+
+
+endif()
+
+if(NOT TARGET lua)
+
+    include(lua.cmake)
+
+
+endif()
